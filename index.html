@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini App</title>
+    </head>
+    <body>
+        <div>
+            <h1>Hello Mini App !!!</h1>
+            
+            <div id="keyboard-info" class="keyboard-info"></div>
+            <div id="send-data" class="keyboard-info"></div>
+        </div>
+
+        <script type="text/javascript">
+            const keys = {
+                back: 8,
+                enter: 13,
+                left: 37,
+                up: 38,
+                right: 39,
+                down: 40,
+                space: 32, 
+            }
+
+            function handleRequest(message){
+                document.write('<h2>' + message + '</h2>');
+            }
+
+            function handleKeypress () {
+                ['keydown', 'mousedown'].forEach((event) => {
+                    window.addEventListener(event, function (e) {
+                        switch (e.keyCode) {
+                            case keys.up:
+                                console.log('Keypress Up');
+                                document.getElementById('keyboard-info').innerHTML = `This is the key<b> Up</b>.`;
+                                break;
+                            case keys.down:
+                                console.log('Keypress Down');
+                                document.getElementById('keyboard-info').innerHTML = `This is the key<b> Down</b>.`;
+                                break;
+                            case keys.left:
+                                console.log('Keypress Left');
+                                document.getElementById('keyboard-info').innerHTML = `This is the key<b> Left</b>.`;
+                                break;
+                            case keys.right:
+                                console.log('Keypress Right');
+                                document.getElementById('keyboard-info').innerHTML = `This is the key<b> Right</b>.`;
+                                break;
+                            case keys.enter:
+                                console.log('Keypress Enter');
+                                document.getElementById('keyboard-info').innerHTML = `This is the key<b> Enter</b>.`;
+                                break;
+                            case keys.back:
+                                console.log('Keypress Back');
+                                document.getElementById('keyboard-info').innerHTML = `This is the key<b> Back</b>.`;
+                                break;
+                        }
+                    });
+                });
+            }
+            handleKeypress();
+        </script>
+    </body>
+</html>
