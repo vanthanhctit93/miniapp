@@ -12,7 +12,7 @@
 
 ## Guide Dev Native
 
-Updated methods list in version: 1.0.0
+Cập nhật danh sách methods ở version: 1.0.0
 
     1. getUserInfo
     2. getDeviceInfo
